@@ -6,4 +6,4 @@ before_install:
     - docker build -t ak2003/frontend -f Dockerfile.dev .
 
 script:
-    - docker run ak2003/frontend npm run test -- --coverage 
+    - docker run -e CI=true ak2003/frontend npm run test
